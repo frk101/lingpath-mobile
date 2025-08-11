@@ -1,0 +1,75 @@
+{
+  "title": "Lingpath - İlk Gün",
+  "scenes": [
+    {
+      "id": 1,
+      "description": "Yeni bir şehre taşındın. İlk sabah, işe gitmeden önce apartman girişinde yaşlı komşun elindeki poşetleri taşımakta zorlanıyor.",
+      "choices": [
+        {
+          "text": "Poşetleri taşımak için yardım et.",
+          "effects": { "empathy": 5, "communication": 3 }
+        },
+        {
+          "text": "Görmezden gelip hızlıca yola çık.",
+          "effects": { "empathy": -5, "decisionSpeed": 3 }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "description": "Otobüste yanına oturan biri sana bilmediğin bir adres soruyor.",
+      "choices": [
+        {
+          "text": "Telefonundan haritayı açıp detaylı tarif ver.",
+          "effects": { "communication": 5, "logic": 3 }
+        },
+        {
+          "text": "Bilmiyorum diyerek kısa cevap ver.",
+          "effects": { "communication": -3, "decisionSpeed": 2 }
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "description": "İşe giderken yolda bir kafede çalışmak için fırsatın var. Ancak zamanın sınırlı.",
+      "choices": [
+        {
+          "text": "Kafeye girip yaratıcı fikirlerini yaz.",
+          "effects": { "creativity": 5, "risk": 2 }
+        },
+        {
+          "text": "Planından sapmadan direkt işe git.",
+          "effects": { "logic": 4, "decisionSpeed": 3 }
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "description": "Patronun, hiç bilmediğin bir konuda sunum yapmanı istiyor.",
+      "choices": [
+        {
+          "text": "Zaman kısıtlı olsa da araştırma yapıp sunuma hazırlan.",
+          "effects": { "resilience": 5, "logic": 4, "decisionSpeed": -2 }
+        },
+        {
+          "text": "Hızlıca temel bilgilerle kısa bir sunum yap.",
+          "effects": { "decisionSpeed": 4, "risk": 3, "logic": -2 }
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "description": "İş çıkışı arkadaşların seni yeni açılan bir macera parkına davet ediyor.",
+      "choices": [
+        {
+          "text": "Evet diyerek onlarla git.",
+          "effects": { "risk": 5, "empathy": 2, "communication": 3 }
+        },
+        {
+          "text": "Yorgun olduğun için eve dön.",
+          "effects": { "resilience": 3, "mood": 2 }
+        }
+      ]
+    }
+  ]
+}
