@@ -13,6 +13,7 @@ export default function RootLayout() {
 
   useEffect(() => {
     if (isReady) {
+      //router.replace("/(auth)/login");
       router.replace("/(main)/home");
     }
   }, [isReady, router]);

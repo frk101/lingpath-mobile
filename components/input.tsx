@@ -15,6 +15,7 @@ interface InputProps extends TextInputProps {
 const Input: React.FC<InputProps> = ({ label, error, ...props }) => {
   return (
     <View style={styles.container}>
+      <Text style={styles.label}>{label}</Text>
       <TextInput
         style={[styles.input, error && styles.inputError]}
         placeholderTextColor="#fff"
@@ -29,15 +30,18 @@ export default Input;
 
 const styles = StyleSheet.create({
   container: {
-    marginBottom: 16,
+    marginBottom: 20,
   },
 
   input: {
-    borderRadius: 30,
-    padding: 20,
+    borderRadius: 10,
+    padding: 10,
     fontSize: 16,
     color: "#fff",
-    backgroundColor: "#562c76",
+    backgroundColor: "#1f252c",
+    borderWidth: 2,
+    borderColor: "#292d33",
+    height: 50,
   },
   inputError: {
     borderColor: "red",
@@ -46,5 +50,11 @@ const styles = StyleSheet.create({
     marginTop: 4,
     color: "red",
     fontSize: 12,
+  },
+  label: {
+    fontSize: 15,
+    fontWeight: "bold",
+    color: "#fff",
+    marginBottom: 10,
   },
 });
