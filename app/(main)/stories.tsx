@@ -4,7 +4,8 @@ import { ImageBackground } from "expo-image";
 import { LinearGradient } from "expo-linear-gradient";
 import { useRouter } from "expo-router";
 import React from "react";
-import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { StyleSheet, TouchableOpacity, View } from "react-native";
+import Animated, { FadeInUp } from "react-native-reanimated";
 
 const StoriesScreen = () => {
   const router = useRouter();
@@ -12,7 +13,8 @@ const StoriesScreen = () => {
   return (
     <ImageBackground
       style={styles.container}
-      source={require("../../assets/images/image_01.png")}
+      source={require("../../assets/images/daily2.png")}
+      blurRadius={10}
     >
       <LinearGradient
         colors={["transparent", "rgba(0,0,0,0.7)", "rgba(0,0,0,0.9)", "black"]}
@@ -62,7 +64,8 @@ const StoriesScreen = () => {
         >
           <FontAwesome name="play" size={20} color="white" />
         </TouchableOpacity>
-        <Text
+        <Animated.Text
+          entering={FadeInUp.delay(120)}
           style={{
             color: "white",
             fontSize: 25,
@@ -71,24 +74,28 @@ const StoriesScreen = () => {
           }}
         >
           Lorem Ipsum
-        </Text>
+        </Animated.Text>
         <View style={{ flexDirection: "row", marginTop: 20 }}>
           {traitsData?.map((item, index) => {
             const IconComponent =
               item.icon?.type === "FontAwesome" ? FontAwesome : FontAwesome5;
             return (
-              <View
+              <Animated.View
+                entering={FadeInUp.delay(index * 120)}
                 key={index}
                 // colors={item.colors}
                 style={styles.icon}
               >
                 <IconComponent name={item.icon.name} size={20} color="#fff" />
-              </View>
+              </Animated.View>
             );
           })}
         </View>
 
-        <Text style={{ color: "white", fontSize: 15, marginTop: 20 }}>
+        <Animated.Text
+          style={{ color: "white", fontSize: 15, marginTop: 20 }}
+          entering={FadeInUp.delay(120)}
+        >
           Lorem Ipsum has been the standard dummy text ever since the 1500s,
           when an unknown printer took a galley of type and scrambled it to make
           a type specimen book. It has survived not only five centuries, but
@@ -97,7 +104,7 @@ const StoriesScreen = () => {
           Letraset sheets containing Lorem Ipsum passages, and more recently
           with desktop publishing software like Aldus PageMaker including
           versions of Lorem Ipsum.
-        </Text>
+        </Animated.Text>
       </View>
     </ImageBackground>
   );

@@ -142,7 +142,8 @@ export default function PlayStories() {
   return (
     <ImageBackground
       style={styles.container}
-      source={require("../../assets/images/image_01.png")}
+      source={require("../../assets/images/daily2.png")}
+      blurRadius={10}
     >
       <LinearGradient
         colors={["transparent", "rgba(0,0,0,0.7)", "rgba(0,0,0,0.9)", "black"]}
