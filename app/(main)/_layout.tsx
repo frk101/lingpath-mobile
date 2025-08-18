@@ -6,6 +6,7 @@ export default function MainLayout() {
       <Stack.Screen name="home" options={{ headerShown: false }} />
       <Stack.Screen name="stories" options={{ headerShown: false }} />
       <Stack.Screen name="play-stories" options={{ headerShown: false }} />
+      <Stack.Screen name="person-analisy" options={{ headerShown: false }} />
     </Stack>
   );
 }

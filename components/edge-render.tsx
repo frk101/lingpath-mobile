@@ -1,4 +1,5 @@
 import { useTheme } from "@react-navigation/native";
+import { router } from "expo-router";
 import React from "react";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { edgeMenuItem, edgeRenderData } from "./types";
@@ -11,7 +12,9 @@ const EdgeRender = ({ item: data }: { item: edgeRenderData }) => {
         key={val.id}
         style={styles.renderContainer}
         onPress={() => {
-          console.log(val);
+          if (val.id === "3") {
+            router.push("/(main)/person-analisy");
+          }
         }}
       >
         <View

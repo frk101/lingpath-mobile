@@ -38,7 +38,8 @@
     "react-native-web": "~0.20.0",
     "react-native-webview": "13.13.5",
     "expo-linear-gradient": "~14.1.5",
-    "expo-speech": "~13.1.7"
+    "expo-speech": "~13.1.7",
+    "@shopify/react-native-skia": "v2.0.0-next.4"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
